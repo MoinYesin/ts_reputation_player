@@ -4,12 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="preload" href="play-icon.svg" as="image">
+<link rel="preload" href="pause-icon.svg" as="image">
+
 <title>Taylor Swift - Reputation Album</title>
 </head>
 <body>
+  <div id="play-icon" style="display: none;">
+    <!-- SVG content for play icon -->
+  </div>
+  <div id="pause-icon" style="display: none;">
+    <!-- SVG content for pause icon -->
+  </div>
+  
 
   <div class="media-player">
     <h2>Reputation</h2>
@@ -25,9 +32,9 @@
       <input type="range" class="seek-bar" value="0" max="100" step="1" onchange="updateSeekBar(this.value)">
       
       <span class="current-time">0:00</span>
-      <button class="control-button previous" onclick="playPrevious()">&#9668; &#9668 </button>
+      <button class="control-button previous" onclick="playPrevious()"></button>
       <button class="control-button play-pause" onclick="togglePlayPause()">Play</button>
-      <button class="control-button next" onclick="playNext()">&#9658 &#9658;</button>
+      <button class="control-button next" onclick="playNext()"></button>
       <span class="total-time">0:00</span>
     </div>
 

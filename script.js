@@ -22,19 +22,21 @@ const songQueue = [
   
 
 ] 
+const playPauseButton = document.querySelector('.play-pause');
 
 function togglePlayPause() {
-  const playPauseButton = document.querySelector('.play-pause');
   isPlaying = !isPlaying;
 
   if (isPlaying) {
     playPauseButton.textContent = 'Pause';
-    playCurrentSong();
+    audioElement.play();
   } else{
     playPauseButton.textContent = 'Play';
     audioElement.pause();
   }
 }
+
+
 
 audioElement.addEventListener('ended', playNext);
 
